@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="mainTitle">My Student Page</h1>
+<p id="message">I am learning JavaScript.</p>
+<p id="pageStatus">Waiting for the page to load...</p>
+<button id="helloButton">Say Hello</button>
+<button id="nameButton">Enter My Name</button>
+<button id="messageButton">Change My Message</button>
+<div id="hoverBox" style="background-color: lightgray; padding: 25px; width: 250px;">Move your mouse here</div>
+<ul>
+    <li>drawing</li>
+    <li>coding</li>
+    <li>playing music</li>
+</ul>
+<script>
+    window.onload=function(){
+document.getElementById("pageStatus").textContent= "The page is ready";
+    };
+document.getElementById("helloButton").onclick=function(){
+        alert("Welcome to my page!");
+    };
+ document.getElementById("nameButton").onclick = function() {
+      let userName = prompt("What is your name?");
+      if (userName) {
+        document.getElementById("mainTitle").textContent = "Welcome, " + userName + "!";
+      }
+    };
+document.getElementById("messageButton").onclick = function() {
+    document.getElementById("message").textContent = "I can make my webpage interactive!";
+};
+let box = document.getElementById("hoverBox");
+box.onmouseover = function() {
+    box.style.backgroundColor = "orange";
+    box.textContent = "You found me!";
+};
+box.onmouseout = function() {
+    box.style.backgroundColor = "lightgray";
+    box.textContent = "Move your mouse here";
+};
+document.getElementById("mainTitle").ondblclick = function() {
+    document.getElementById("mainTitle").textContent = "My Student Page";
+};
+</script>
+</div>
+</body>
+
+
+
+
+
+
+
+</body>
+</html>
